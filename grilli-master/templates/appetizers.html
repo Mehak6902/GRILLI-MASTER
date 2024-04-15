@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>APPETIZERS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9; /* Changed background color to a lighter shade */
+    }
+    .menu-section {
+      margin-bottom: 50px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); /* Added transparency to the background */
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transform: scale(0.95);
+      animation: scaleIn 0.5s ease forwards;
+    }
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    h2 {
+      color: #4CAF50;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 60px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .menu-item {
+      position: relative;
+      flex: 0 0 calc(30% - 20px);
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px) scale(1.02); /* Added scaling on hover */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .card {
+      width: 100%;
+      height: 500px; /* Adjusted height for better layout */
+      overflow: hidden;
+      border-radius: 20px;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover .card img {
+      transform: scale(1.05);
+    }
+    .menu-item-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 0 0 20px 20px;
+      transition: background-color 0.3s ease;
+      opacity: 0; /* Hide content by default */
+      transform: translateY(100%);
+    }
+    .menu-item:hover .menu-item-content {
+      opacity: 1; /* Show content on hover */
+      transform: translateY(0);
+    }
+    h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .price {
+      font-size: 24px; /* Adjusted font size */
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="menu-section">
+  <h2>Appetizers</h2>
+  <div class="menu-items">
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://media-cdn2.greatbritishchefs.com/media/u0qnarx2/gbc_may22_piccolo-2.whqc_768x512q80.jpg" alt="Bruschetta">
+      </div>
+      <div class="menu-item-content">
+        <h3>Bruschetta</h3>
+        <p>Traditional Italian appetizer with toasted bread topped with fresh tomatoes, garlic, basil, and olive oil.</p>
+        <p class="price">Price: $1</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnFNqMeG_hpbolAgdD7AXQw1K_GrOcZp7_7Gc_jDdvg&s" alt="Spinach Artichoke Dip">
+      </div>
+      <div class="menu-item-content">
+        <h3>Spinach Artichoke Dip</h3>
+        <p>Creamy spinach and artichoke dip served with crispy tortilla chips.</p>
+        <p class="price">Price: $2</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+        <div class="card">
+          <img src="https://www.eatingwell.com/thmb/jC0C97YHPDjRDYlh2f6iruXfXa0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7032138-3b643290901d4283963338d37a5e557e.jpg" alt="Spinach Artichoke Dip">
+        </div>
+        <div class="menu-item-content">
+          <h3>Stuffed Mushrooms</h3>
+          <p>Delicious mushrooms filled with a savory mixture of breadcrumbs, garlic, herbs, and cheese, baked to perfection for a flavorful appetizer.</p>
+          <p class="price">Price: $12</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="card">
+          <img src="https://apronandwhisk.com/wp-content/uploads/2023/07/Easy-Fried-Calamari-Apron-Whisk-2.jpg" alt="Spinach Artichoke Dip">
+        </div>
+        <div class="menu-item-content">
+          <h3>Crispy Calamari</h3>
+          <p>Tender rings of calamari coated in seasoned flour, deep-fried until crispy, and served with marinara sauce or aioli.</p>
+          <p class="price">Price: $14</p>
+        </div>
+      </div>
+  
+
+      <div class="menu-item">
+        <div class="card">
+          <img src="https://www.kitchensanctuary.com/wp-content/uploads/2015/08/Chicken-Satay-square-FS-7321.jpg" alt="Spinach Artichoke Dip">
+        </div>
+        <div class="menu-item-content">
+          <h3>Chicken Satay</h3>
+          <p>Skewered and grilled marinated chicken served with a peanut dipping sauce and a side of cucumber salad.</p>
+          <p class="price">Price: $20</p>
+        </div>
+      </div>
+  
+
+      <div class="menu-item">
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/cd/9b/ff/cd9bffa6b7f67a816042bd7ec44f13d3.jpg" alt="Spinach Artichoke Dip">
+        </div>
+        <div class="menu-item-content">
+          <h3>Antipasto Platter</h3>
+          <p>Assorted cured meats, cheeses, olives, roasted vegetables, and breadsticks, perfect for sharing and pairing with wine.</p>
+          <p class="price">Price: $25</p>
+        </div>
+      </div>
+  
+    <!-- Add more appetizers here -->
+
+    <!-- Add more appetizers here -->
+  </div>
+</div>
+</body>
+</html>

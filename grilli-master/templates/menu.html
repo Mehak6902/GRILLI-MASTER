@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MENU</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      background-image: 
+        url('left-pattern.png'), /* Adjust the path to your left pattern image */
+        url('right-pattern.png'), /* Adjust the path to your right pattern image */
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Add a gradient overlay */
+      background-repeat: repeat-y, repeat-y, no-repeat; /* Repeat left and right patterns vertically */
+      background-position: left, right, center; /* Position left and right patterns */
+    }
+    .menu-section {
+      margin-bottom: 30px;
+    }
+    
+    h2 {
+      color: #4CAF50;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 60px;
+    }
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .menu-item {
+      flex: 0 0 calc(50% - 20px); /* Changed to 50% to occupy half the space */
+      margin-bottom: 20px;
+    }
+    
+    @media (min-width: 768px) {
+      .menu-item {
+        flex: 0 0 calc(33.33% - 20px); /* Changed to 33.33% to occupy one-third of the space */
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .menu-item {
+        flex: 0 0 calc(25% - 20px); /* Changed back to 25% for larger screens */
+      }
+    }
+    
+    .card {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added transitions for box-shadow and background-color */
+      overflow: hidden;
+      position: relative; /* Added position relative */
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      background-color: #f2f2f2; /* Added background color change on hover */
+    }
+    
+    .menu-item h3,
+    .menu-item p {
+      color: white;
+      text-align: center;
+    }
+    
+    .menu-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .menu-item-content {
+      padding: 20px;
+      position: absolute; /* Added position absolute */
+      bottom: 0; /* Added to position at the bottom */
+      left: 0; /* Added to position at the left */
+      width: 100%; /* Added to span the full width of the card */
+      background-color: rgba(0, 0, 0, 0.7); /* Added background color with opacity */
+      z-index: 1; /* Added higher z-index to appear above the image */
+    }
+  </style>
+</head>
+<body>
+<div class="menu-section">
+  <h2 >Appetizers</h2>
+  <div class="menu-items">
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://media-cdn2.greatbritishchefs.com/media/u0qnarx2/gbc_may22_piccolo-2.whqc_768x512q80.jpg" alt="Bruschetta">
+        <div class="menu-item-content">
+          <h3>Bruschetta</h3>
+          <p>Traditional Italian appetizer with toasted bread topped with fresh tomatoes, garlic, basil, and olive oil.</p>
+          <p style="font-size: 20px">Price: $1</p>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnFNqMeG_hpbolAgdD7AXQw1K_GrOcZp7_7Gc_jDdvg&s" alt="Spinach Artichoke Dip">
+        <div class="menu-item-content">
+          <h3>Spinach Artichoke Dip</h3>
+          <p>Creamy spinach and artichoke dip served with crispy tortilla chips.</p>
+          <p style="font-size: 20px">Price: $2</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://www.kitchensanctuary.com/wp-content/uploads/2015/08/Chicken-Satay-square-FS-7321.jpg" alt="Spinach Artichoke Dip">
+        <div class="menu-item-content">
+          <h3>Chicken Satay</h3>
+          <p>Tender grilled chicken skewers marinated in a flavorful blend of spices, served with a savory peanut sauce for dipping.</p>       
+          <p style="font-size: 20px">Price: $10</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://www.micadeli.com/wp-content/uploads/2019/10/vegetable-spring-rolls.jpg" alt="Spinach Artichoke Dip">
+        <div class="menu-item-content">
+          <h3>Veg Spring Rolls</h3>
+          <p>Crunchy spring rolls filled with a colorful medley of vegetables, wrapped in a delicate pastry and served with a sweet chili dipping sauce.</p>
+          <p style="font-size: 20px">Price: $5</p>
+
+        </div>
+      </div>
+    </div>
+    <!-- Add more appetizers here -->
+  </div>
+</div>
+
+<div class="menu-section">
+  <h2>Beverages</h2>
+  <div class="menu-items">
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://natashaskitchen.com/wp-content/uploads/2023/07/Lemonade-Recipe-3.jpg" alt="House-Made Lemonade">
+        <div class="menu-item-content">
+          <h3>House-Made Lemonade</h3>
+          <p>Refreshing lemonade made with fresh-squeezed lemons and a hint of mint.</p>
+          <p style="font-size: 20px">Price: $1</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://dosmaderas.com/wp-content/uploads/2021/10/Dos-Maderas-rum-Cocktail-Espresso-Martini-HERO-6.jpg" alt="Espresso Martini">
+        <div class="menu-item-content">
+          <h3>Espresso Martini</h3>
+          <p>A delightful blend of espresso, vodka, coffee liqueur, and a splash of cream.</p>
+          <p style="font-size: 20px">Price: $1</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsT8SRdVpjj8u6q_dxTSL2s-55zPkR_aN3Sa5ffJ-TbxFB9DcrDSvahty7cRV4IUT1-5cld8NsdxJQyEjG2zToTHFseXPTKjnWznyIzUGJircDWgCee6qN8BFvBkh4y_lbHP86iV_liLGl/s1600/2016-06-24+171p.jpg" alt="Espresso Martini">
+        <div class="menu-item-content">
+          <h3>Berry Sparkler</h3>
+          <p>A refreshing concoction of mixed berries muddled with sparkling water, creating a fizzy and fruity beverage perfect for any occasion.</p>
+          <p style="font-size: 20px">Price: $3</p>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Add more beverages here -->
+
+<div class="menu-section">
+  <h2>Main Courses</h2>
+  <div class="menu-items">
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://media.istockphoto.com/id/1281404116/photo/fried-salmon-steaks-fried-potatoes-and-fresh-vegetables-on-wooden-table.jpg?s=612x612&w=0&k=20&c=3yGaSTFKy9FDo7QI83_yJG1g2jO4dfS9n4e9NbFijgI=" alt="Grilled Salmon">
+        <div class="menu-item-content">
+          <h3>Grilled Salmon</h3>
+          <p>Fresh Atlantic salmon fillet grilled to perfection, served with roasted vegetables and lemon butter sauce.</p>
+          <p style="font-size: 20px">Price: $35</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://www.cookingclassy.com/wp-content/uploads/2022/11/chicken-alfredo-01.jpg" alt="Chicken Alfredo">
+        <div class="menu-item-content">
+          <h3>Chicken Alfredo</h3>
+          <p>Tender grilled chicken breast served over fettuccine pasta tossed in creamy Alfredo sauce.</p>
+          <p style="font-size: 20px">Price: $40</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://www.coles.com.au/content/dam/coles/inspire-create/april21-images/April21_Freezable-veggie-risotto-with-parmesan-crisps-976x549.jpg" alt="Chicken Alfredo">
+        <div class="menu-item-content">
+          <h3>Vegetarian Risotto</h3>
+          <p>A creamy and savory rice dish made with Arborio rice, simmered to perfection with vegetable broth and a medley of vegetables, offering a comforting and satisfying meal.</p>
+          <p style="font-size: 20px">Price: $30</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://img-global.cpcdn.com/recipes/4e6759e54cbfedc2/1200x630cq70/photo.jpg" alt="Chicken Alfredo">
+        <div class="menu-item-content">
+          <h3>Special North Indian Thali</h3>
+          <p>Embark on a culinary journey with our Special North Indian Thali, featuring an array of aromatic dishes bursting with authentic flavors and spices.</p>
+          <p style="font-size: 20px">Price: $40</p>
+
+        </div>
+      </div>
+    </div>
+    <!-- Add more main courses here -->
+  </div>
+</div>
+
+<div class="menu-section">
+  <h2>Desserts</h2>
+  <div class="menu-items">
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://www.bakingo.com/blog/wp-content/uploads/2022/06/best-choco-lava-cake-recipe-ever-1200x900.jpg" alt="Chocolate Lava Cake">
+        <div class="menu-item-content">
+          <h3>Chocolate Lava Cake</h3>
+          <p>Decadent chocolate cake with a molten chocolate center, served with vanilla ice cream.</p>
+          <p style="font-size: 20px">Price: $20</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://handletheheat.com/wp-content/uploads/2023/12/best-tiramisu-recipe-SQUARE.jpg" alt="Tiramisu">
+        <div class="menu-item-content">
+          <h3>Tiramisu</h3>
+          <p>Classic Italian dessert made with layers of espresso-soaked ladyfingers and mascarpone cheese.</p>
+          <p style="font-size: 20px">Price: $10</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://www.willcookforsmiles.com/wp-content/uploads/2016/05/Layered-Chocolate-Espresso-Cheesecake-Dessert-No-Bake.jpg" alt="Tiramisu">
+        <div class="menu-item-content">
+          <h3>Espresso Mascarpone Cheesecake</h3>
+          <p>An indulgent twist on the classic Italian dessert featuring layers of espresso-infused ladyfingers and creamy mascarpone cheese.</p>
+          <p style="font-size: 20px">Price: $10</p>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add more desserts here -->
+  </div>
+</div>
+
+
+  </div>
+</div>
+</body>
+</html>

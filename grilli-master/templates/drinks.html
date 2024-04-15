@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DRINKS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    .header {
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 65px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      margin: 20px;
+      width: 300px;
+      height: 300px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      box-sizing: border-box;
+      transition: transform 0.3s, opacity 0.3s;
+      transform: translateY(100%);
+      opacity: 0;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .card:hover .card-content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: calc(50% - 40px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: calc(100% - 40px);
+      }
+    }
+
+    /* Additional Styles for Enhancement */
+
+    .glow {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00c0ff, 0 0 20px #00c0ff, 0 0 30px #00c0ff;
+      }
+      to {
+        text-shadow: 0 0 20px #00c0ff, 0 0 30px #00c0ff, 0 0 40px #00c0ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header glow" >Welcome to Our Exquisite Drinks </div>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://caribbeanlifestyle.com/wp-content/uploads/2022/06/different-types-mojito-cocktail-dark-brown.jpg" alt="Drink 1">
+      <div class="card-content">
+        <h3>Special Mojito</h3>
+        <p>A refreshing blend of mint, lime, and rum.</p>
+        <p style="font-size: 25px">$10</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi0IgW3D45ZZeI9ADzZHcMjvD_QaRkQsRvAjWt3WGpt8vJCVhZKOQIB-Gwh7pdEkBoSQ4&usqp=CAU" alt="Drink 2">
+      <div class="card-content">
+        <h3>Tropical Paradise</h3>
+        <p>A delightful mix of pineapple, coconut, and rum.</p>
+        <p style="font-size: 25px">$12</p>
+      </div>
+    </div>
+
+    <div class="card">
+        <img src="https://pudgefactor.com/wp-content/uploads/2018/04/Featured-3.jpg" alt="Drink 3">
+        <div class="card-content">
+          <h3>Frozen Margarita</h3>
+          <p>A frozen sensation with tequila, lime, and triple sec.</p>
+          <p style="font-size: 25px">$11</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScXDsRSdvIjPSOgP8j_IZlxX8oaNfm7dh_tT7zAO3mPw&s" alt="Drink 3">
+        <div class="card-content">
+          <h3>Pineapple Mint Spritzer</h3>
+          <p>A refreshing blend of pineapple juice, fresh mint leaves, and sparkling water, offering a cool and invigorating drink for any occasion.</p>
+          <p style="font-size: 25px">$11</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://i0.wp.com/www.teacoffeecup.com/wp-content/uploads/2020/07/louisiana-cafe-au-lait.jpg?fit=800%2C531&ssl=1" alt="Drink 3">
+        <div class="card-content">
+          <h3>Café au Lait</h3>
+          <p>A classic French coffee beverage made by combining equal parts brewed coffee and steamed milk, creating a smooth and creamy drink with a mellow flavor profile.</p>
+          <p style="font-size: 25px">$11</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.foodandwine.com/thmb/V1OEgtLQGUv_w2Fvm40WMLsJ4rk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Indulgent-Hot-Chocolate-FT-RECIPE0223-fd36942ef266417ab40440374fc76a15.jpg" alt="Drink 3">
+        <div class="card-content">
+          <h3>Hot Chocolate</h3>
+          <p>A comforting and indulgent beverage made with rich cocoa powder, warm milk, and topped with fluffy whipped cream or marshmallows, perfect for cozying up on a chilly day.</p>
+          <p style="font-size: 25px">$11</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.acouplecooks.com/wp-content/uploads/2020/09/Latte-Art-067s.jpg" alt="Drink 3">
+        <div class="card-content">
+          <h3>Latte</h3>
+          <p>A creamy and satisfying coffee drink consisting of espresso and steamed milk, topped with a thin layer of foam, offering a balanced and comforting flavor with a touch of sweetness.</p>
+          <p style="font-size: 25px">$11</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://thespicetrain.com/wp-content/uploads/2020/07/spiced-irish-coffee-20-1-0.jpg" alt="Drink 3">
+        <div class="card-content">
+          <h3>Irish Coffee</h3>
+          <p>A delightful combination of hot brewed coffee, Irish whiskey, sugar, and topped with a dollop of whipped cream, creating a warming and satisfying drink with a hint of sweetness and a kick of alcohol.</p>
+          <p style="font-size: 25px">$11</p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Move the closing div tag here -->
+
+  <!-- Add more cards for additional drinks -->
+
+</body>
+</html>

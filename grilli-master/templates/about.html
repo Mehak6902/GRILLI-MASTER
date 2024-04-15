@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Delicious Delights Restaurant</title>
+
+    <style>
+        /* Reset default browser styles */
+    
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: #333;
+            line-height: 1.6;
+        }
+    
+        .container {
+            position: relative; /* Ensure the container stays on top of the pattern */
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1531973968078-9bb02785f13d?q=80&w=1985&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            height: 764px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .hero-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+    
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+    
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+    
+        .hero-section:hover h1,
+        .hero-section:hover p {
+            transform: translateY(-5px);
+        }
+    
+        .about-section {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 50px;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    
+        .about-section h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            text-transform: uppercase;
+        }
+    
+        .about-section p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+    
+        .card-section {
+            background-color: black;
+            padding: 50px 0;
+            text-align: center;
+        }
+    
+        .card-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow cards to wrap to the next row */
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .card {
+            position: relative;
+            flex: 0 1 calc(33.33% - 20px); /* Approximately one-third of the container's width minus gap */
+            max-width: calc(33.33% - 20px); /* To prevent stretching on smaller screens */
+            height: 500px; /* Set the height of the card */
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        .card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+    
+        .card:hover img {
+            transform: scale(1.1);
+        }
+    
+        .card-content {
+            position: absolute;
+            bottom: -100%; /* Move the content below the card initially */
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            text-align: center; /* Center align the text */
+            background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+            color: white; /* White text color */
+            transition: bottom 0.3s ease; /* Add transition property */
+        }
+    
+        .card:hover .card-content {
+            bottom: 0; /* Move the content up on hover */
+        }
+    
+        .card h3 {
+            font-size: 30px;
+            margin-bottom: 1px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    
+        .card p {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #fff;
+            align-items: left;
+        }
+    
+        /* Additional Styles */
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 400px;
+            }
+    
+            .hero-section h1 {
+                font-size: 3rem;
+            }
+    
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+    
+            .about-section h2 {
+                font-size: 2.5rem;
+            }
+    
+            .about-section p {
+                font-size: 1.1rem;
+            }
+    
+            .card {
+                flex: 0 1 calc(50% - 20px); /* Two cards per row on smaller screens */
+                max-width: calc(50% - 20px); /* To prevent stretching on smaller screens */
+            }
+    
+            .card img {
+                height: 150px;
+            }
+    
+            .card h3 {
+                font-size: 1.8rem;
+            }
+    
+            .card p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
+    
+</head>
+<body>
+
+<section class="hero-section">
+    <div class="container">
+        <h1>Welcome to Delicious Delights</h1>
+        <p>Indulge in a world of exquisite flavors and delightful experiences.</p>
+    </div>
+</section>
+
+<section class="about-section">
+    <h2>About Us</h2>
+    <p>Welcome to <strong>Delicious Delights 😋</strong>, where taste meets perfection. Our restaurant was founded with the vision of bringing exquisite flavors and delightful experiences to our customers.</p>
+    <p>At Delicious Delights 🍕🍔🥞, we are committed to using the freshest ingredients to create mouthwatering dishes that satisfy your cravings. Our chefs are passionate about their craft, ensuring that each meal is a masterpiece of flavor and presentation.</p>
+    <p>Whether you're dining in with friends and family or grabbing a quick bite on the go, we strive to provide exceptional service in a warm and inviting atmosphere. Your satisfaction is our top priority.</p>
+    <p>Experience the culinary journey of a lifetime at Delicious Delights 😍. Join us today and indulge in a world of delicious possibilities.</p>
+</section>
+
+<section class="card-section">
+    <div class="container">
+        <h2 style="color: white; font-size: 4.5rem; ">Featured Dishes</h2>
+        <p style="color: pink; font-size: 2.3rem; ">Explore 😍 our exquisite selection of featured dishes, carefully crafted to tantalize your taste buds 😋 </p>  
+        <div class="card-container">
+            <div class="card">
+                <img src="https://insanelygoodrecipes.com/wp-content/uploads/2021/10/Skillet-Chicken-and-Bacon-Pasta-1.jpg" alt="Special Pasta">
+                <div class="card-content">
+                    <h3>Special Pasta</h3>
+                    <p>Delicious pasta cooked to perfection with a variety of sauces and toppings.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1281404116/photo/fried-salmon-steaks-fried-potatoes-and-fresh-vegetables-on-wooden-table.jpg?s=612x612&w=0&k=20&c=3yGaSTFKy9FDo7QI83_yJG1g2jO4dfS9n4e9NbFijgI=" alt="Grilled Salmon">
+                <div class="card-content">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh salmon fillet grilled to perfection, served with a side of seasonal vegetables.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://handletheheat.com/wp-content/uploads/2023/12/best-tiramisu-recipe-SQUARE.jpg" alt="Tiramisu">
+                <div class="card-content">
+                    <h3>Tiramisu</h3>
+                    <p>Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=1080/assets/search/usecase/tandoori_platter_zdish.png" alt="Tiramisu">
+                <div class="card-content">
+                    <h3>Tandoori Platter</h3>
+                    <p>Experience the tantalizing flavors of our Tandoori Platter, featuring a selection of expertly marinated meats cooked to perfection in our traditional tandoor oven.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://t3.ftcdn.net/jpg/05/05/67/20/360_F_505672037_Yi7tGfMb3jYk6e1PYLjo1kqowY2WBWWq.jpg" alt="Tiramisu">
+                <div class="card-content">
+                    <h3>Barbeque Platter</h3>
+                    <p>Indulge in our savory barbecue delights, showcasing a symphony of smoky flavors and tender grilled meats, perfect for satisfying your cravings.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://3.bp.blogspot.com/-XNd61BpjVPw/T8CisAWCKBI/AAAAAAAAEAo/bDhgC_Mbd3c/s640/IMG_9149.JPG" alt="Tiramisu">
+                <div class="card-content">
+                    <h3>Special North Indian Thali</h3>
+                    <p>Embark on a culinary journey with our Special North Indian Thali, featuring an array of aromatic dishes bursting with authentic flavors and spices.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/D4E12AQFxrW-ZtyYxew/article-cover_image-shrink_720_1280/0/1708462963601?e=2147483647&v=beta&t=LwbrFF3rJIYpYzHxFVEkGMnOE6b47qkmHcmhWSUd2ow   " alt="Tiramisu">
+                <div class="card-content">
+                    <h3>Grilled Portobello Mushroom Steak</h3>
+                    <p>Savor the robust flavors of our Grilled Portobello Mushroom Steak, expertly prepared to perfection and served with a medley of seasonal vegetables for a delightful culinary experience.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://juiceplus.scene7.com/is/image/juiceplus/Caprese%20Salad?wid=920&_ck=1666008277204   " alt="Tiramisu">
+                <div class="card-content">
+                    <h3>Garden Fresh Caprese Salad</h3>
+                    <p>Indulge in the vibrant flavors of our Garden Fresh Caprese Salad, featuring ripe tomatoes, creamy mozzarella, and fragrant basil for a refreshing culinary experience.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://eatdrinkplay.com/wp-content/uploads/2023/07/Khao-Pla.jpeg   " alt="Tiramisu">
+                <div class="card-content">
+                    <h3>Veggie Pad Thai Paradise</h3>
+                    <p>Transport your taste buds to a culinary paradise with our Veggie Pad Thai, a tantalizing blend of rice noodles, crisp vegetables, and aromatic herbs, perfectly seasoned and served to perfection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+    ScrollReveal().reveal('.hero-section, .about-section, .card', {
+        delay: 200,
+        distance: '50px',
+        easing: 'ease-in-out',
+        origin: 'bottom',
+        interval: 100
+    });
+</script>
+
+
+</body>
+</html>                   

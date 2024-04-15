@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BREAKFAST</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9; /* Changed background color to a lighter shade */
+    }
+    .menu-section {
+      margin-bottom: 50px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); /* Added transparency to the background */
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transform: scale(0.95);
+      animation: scaleIn 0.5s ease forwards;
+    }
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    h2 {
+      color: #4CAF50;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 60px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .menu-item {
+      position: relative;
+      flex: 0 0 calc(30% - 20px);
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px) scale(1.02); /* Added scaling on hover */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .card {
+      width: 100%;
+      height: 500px; /* Adjusted height for better layout */
+      overflow: hidden;
+      border-radius: 20px;
+    }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover .card img {
+      transform: scale(1.05);
+    }
+    .menu-item-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 0 0 20px 20px;
+      transition: background-color 0.3s ease;
+      opacity: 0; /* Hide content by default */
+      transform: translateY(100%);
+    }
+    .menu-item:hover .menu-item-content {
+      opacity: 1; /* Show content on hover */
+      transform: translateY(0);
+    }
+    h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .price {
+      font-size: 24px; /* Adjusted font size */
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="menu-section">
+  <h2>Breakfast</h2>
+  <div class="menu-items">
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://stordfkenticomedia.blob.core.windows.net/df-us/rms/media/recipemediafiles/recipes/retail/x17/2020_belgian-style-waffles_16700_600x600.jpg?ext=.jpg" alt="Bruschetta">
+      </div>
+      <div class="menu-item-content">
+        <h3>Belgian Waffles</h3>
+        <p>Fluffy waffles served with toppings such as fresh berries, whipped cream, maple syrup, and a dusting of powdered sugar</p>
+        <p class="price">Price: $1</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="card">
+        <img src="https://www.kitchensanctuary.com/wp-content/uploads/2023/09/Avocado-Toast-square-FS.jpg" alt="Spinach Artichoke Dip">
+      </div>
+      <div class="menu-item-content">
+        <h3>Avocado Toast</h3>
+        <p>Slices of toasted artisan bread topped with mashed avocado, cherry tomatoes, feta cheese, and a drizzle of balsamic glaze, served with a side of mixed greens.</p>
+        <p class="price">Price: $2</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+        <div class="card">
+          <img src="https://www.budgetbytes.com/wp-content/uploads/2023/01/French-Toast-syrup.jpg" alt="Spinach Artichoke Dip">
+        </div>
+        <div class="menu-item-content">
+          <h3>French Toast</h3>
+          <p>Thick slices of bread dipped in a cinnamon-spiced egg mixture, cooked until golden brown, and served with powdered sugar and maple syrup.</p>
+          <p class="price">Price: $12</p>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <div class="card">
+          <img src="https://images.slurrp.com/prod/recipe_images/transcribe/breakfast/Greek-Yoghurt-Fruit-Parfait.webp" alt="Spinach Artichoke Dip">
+        </div>
+        <div class="menu-item-content">
+          <h3>Greek Yogurt Parfait</h3>
+          <p> Layers of Greek yogurt, granola, and mixed berries, topped with honey or agave nectar and a sprinkle of nuts or seeds.</p>
+          <p class="price">Price: $14</p>
+        </div>
+      </div>
+  
+
+      <div class="menu-item">
+        <div class="card">
+          <img src="https://cdn.mos.cms.futurecdn.net/YGQ5sBH9rtuvrkNofW9MKM.jpg" alt="Spinach Artichoke Dip">
+        </div>
+        <div class="menu-item-content">
+          <h3>Pancakes Stack</h3>
+          <p>A stack of fluffy pancakes served with butter and maple syrup, with optional add-ons such as chocolate chips, blueberries, or bananas.</p>
+          <p class="price">Price: $20</p>
+        </div>
+      </div>
+  
+
+      <div class="menu-item">
+        <div class="card">
+          <img src="https://simply-delicious-food.com/wp-content/uploads/2022/09/Breakfast-board28.jpg" alt="Spinach Artichoke Dip">
+        </div>
+        <div class="menu-item-content">
+          <h3>Breakfast Platter</h3>
+          <p>A delightful morning spread featuring fluffy scrambled eggs, crispy bacon, buttery croissants, fresh fruit, and a selection of condiments, ideal for starting your day with a satisfying breakfast.</p>
+          <p class="price">Price: $25</p>
+        </div>
+      </div>
+  
+    <!-- Add more appetizers here -->
+
+    <!-- Add more appetizers here -->
+  </div>
+</div>
+</body>
+</html>
